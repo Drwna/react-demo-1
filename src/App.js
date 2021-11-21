@@ -7,6 +7,8 @@ const App = () => {
       App 组件
       <Component />
       <Loop numbers={[1, 2, 3, 4]} />
+      <Welcome name="react" />
+      <Welcome1 name="react" />
     </div>
   );
 };
@@ -34,5 +36,15 @@ const Loop = (props) => {
   }
   return <div>{array}</div>;
 };
+
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+
+function Welcome1(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
 
 export default App;
